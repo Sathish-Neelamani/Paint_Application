@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: paint
+  datasource:
+    url: jdbc:mysql://localhost:3306/paint?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: Undefined123#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      database-platform: org.hibernate.dialect.MySQL8Dialect  # Use MySQLDialect for older versions
+      hibernate:
+        ddl-auto: update  # Options: none, update, create, create-drop
+      show-sql: true  # Enable SQL query logging
+    sql:
+      init:
+        mode: always  # Run schema.sql and data.sql at startup (set to "never" in production)
